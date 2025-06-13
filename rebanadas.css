@@ -1,0 +1,447 @@
+:root {
+    --primary: #6D4C3D;
+    --secondary: #C9A87C;
+    --accent: #E8C07D;
+    --light: #F8F4EF;
+    --dark: #3E2723;
+    --text: #333333;
+    --white: #FFFFFF;
+    --shadow: 0 15px 30px rgba(0,0,0,0.1);
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Header Premium */
+.hero {
+    background: linear-gradient(135deg, rgba(109,76,61,0.9) 0%, rgba(201,168,124,0.8) 100%), 
+                url('img/rebanadas-banner.jpg') center/cover no-repeat;
+    color: var(--white);
+    text-align: center;
+    padding: 6rem 2rem;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    margin-bottom: 4rem;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: var(--light);
+    transform: skewY(-3deg);
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    animation: fadeInDown 1s ease;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease 0.3s forwards;
+    opacity: 0;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Tarjetas de rebanadas - Mantenemos cake-card para reutilizar estilos */
+.cake-card {
+    display: flex;
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 4rem;
+    transition: var(--transition);
+    position: relative;
+    min-height: 350px; /* Un poco menos alto que para pasteles completos */
+}
+
+.cake-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.cake-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.cake-image {
+    flex: 1;
+    min-width: 45%;
+    position: relative;
+    overflow: hidden;
+}
+
+.cake-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.cake-card:hover .cake-image img {
+    transform: scale(1.05);
+}
+
+.cake-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--accent);
+    color: var(--dark);
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+.cake-details {
+    flex: 1;
+    padding: 2.5rem; /* Un poco menos padding que en pasteles */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cake-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary);
+    font-size: 2rem; /* Un poco más pequeño */
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.cake-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+}
+
+.cake-features {
+    list-style: none;
+    margin: 1.2rem 0; /* Menos margen */
+}
+
+.cake-features li {
+    margin-bottom: 0.6rem; /* Menos espacio entre líneas */
+    padding-left: 1.8rem;
+    position: relative;
+    font-size: 0.95rem; /* Texto un poco más pequeño */
+}
+
+.cake-features li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--accent);
+}
+
+.cake-price {
+    font-size: 1.6rem; /* Un poco más pequeño que en pasteles */
+    color: var(--primary);
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.cake-price span {
+    font-size: 0.9rem;
+    color: var(--text);
+    font-weight: 400;
+}
+
+.cake-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+
+.btn {
+    padding: 0.7rem 1.8rem; /* Botones un poco más compactos */
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--dark);
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* Efecto de ingredientes */
+.ingredients-hover {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255,255,255,0.9);
+    padding: 1rem;
+    border-radius: 10px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 80%; /* Más ancho para mostrar más ingredientes */
+    max-width: 300px;
+}
+
+.ingredients-hover h4 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.ingredients-hover ul {
+    list-style: none;
+}
+
+.ingredients-hover li {
+    margin-bottom: 0.3rem;
+    position: relative;
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
+}
+
+.ingredients-hover li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.cake-card:hover .ingredients-hover {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Footer mejorado */
+footer {
+    background: var(--dark);
+    color: var(--light);
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.footer-links a {
+    color: var(--light);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.social-icons a {
+    color: var(--light);
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+/* Botón Volver al inicio */
+.btn-volver {
+    display: inline-block;
+    margin: 2rem 0;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 2px solid var(--primary);
+}
+
+.btn-volver:hover {
+    background-color: transparent;
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.btn-volver i {
+    margin-right: 0.5rem;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .cake-card, .cake-card:nth-child(even) {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .cake-image {
+        min-height: 250px; /* Más bajo que en desktop */
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 1.5rem;
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .cake-details {
+        padding: 1.8rem;
+    }
+    
+    .cake-actions {
+        flex-direction: column;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .cake-title {
+        font-size: 1.8rem;
+    }
+    
+    .cake-features li {
+        font-size: 0.85rem;
+    }
+    
+    .cake-price {
+        font-size: 1.4rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}

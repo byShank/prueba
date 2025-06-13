@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos Hafos Cake</title>
+    <link rel="stylesheet" href="curso.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+           
+            <span>HAFOS CAKE</span>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#" class="active">Cursos</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Domina el Arte de la Repostería</h1>
+            <p>Aprende técnicas profesionales con nuestros cursos especializados</p>
+            <div class="hero-buttons">
+                
+                <a href="index.html" class="back-button">Volver al Inicio</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-filter">
+        <div class="filter-container">
+            <h2>Filtrar por categoría:</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="pasteleria">Pastelería</button>
+                <button class="filter-btn" data-filter="chocolateria">Chocolatería</button>
+                <button class="filter-btn" data-filter="decoracion">Decoración</button>
+                <button class="filter-btn" data-filter="panaderia">Panadería</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="course-container">
+        <h2 class="section-title">Nuestros Cursos Disponibles</h2>
+        <div class="course-grid">
+            <!-- Curso 1 -->
+            <article class="course-card" data-category="pasteleria decoracion">
+                <div class="course-image">
+                    <img src="img/Curso2.jpg" alt="Lasaña casera" />
+                    <span class="course-tag">Nuevo</span>
+                </div>
+                <div class="course-content">
+                    <h3>Lasaña Casera</h3>
+                    <p class="course-description">Aprende a crear impresionantes pasteles de boda con técnicas profesionales de decoración.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 8 Horas</span>
+                        <span><i class="fas fa-user-graduate"></i> Intermedio</span>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-price">$1,400 MXN</span>
+                        <button class="enroll-btn">Inscribirse</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Curso 2 -->
+            <article class="course-card" data-category="chocolateria">
+                <div class="course-image">
+                    <img src="img/curso3.jpg" alt="Arte en chocolate" />
+                    <span class="course-tag">Popular</span>
+                </div>
+                <div class="course-content">
+                    <h3>Monchosas 1</h3>
+                    <p class="course-description">Domina el temperado y moldeado de chocolate para crear esculturas comestibles.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 6 Horas</span>
+                        <span><i class="fas fa-user-graduate"></i> Avanzado</span>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-price">$1,400 MXN</span>
+                        <button class="enroll-btn">Inscribirse</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Curso 3 -->
+            <article class="course-card" data-category="pasteleria decoracion">
+                <div class="course-image">
+                    <img src="img/curso4.jpg" alt="Cupcakes decorados" />
+                </div>
+                <div class="course-content">
+                    <h3>Monchosas 2</h3>
+                    <p class="course-description">Técnicas innovadoras para decorar cupcakes que impresionarán a tus clientes.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 6 Horas</span>
+                        <span><i class="fas fa-user-graduate"></i> Principiante</span>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-price">$1,600 MXN</span>
+                        <button class="enroll-btn">Inscribirse</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Curso 4 -->
+            <article class="course-card" data-category="panaderia">
+                <div class="course-image">
+                    <img src="img/curso5.jpg" alt="Pan artesanal" />
+                </div>
+                <div class="course-content">
+                    <h3>Pan Artesanal</h3>
+                    <p class="course-description">Aprende los secretos de la fermentación natural y horneado profesional.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 5 Horas</span>
+                        <span><i class="fas fa-user-graduate"></i> Intermedio</span>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-price">$1,400 MXN</span>
+                        <button class="enroll-btn">Inscribirse</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Curso 5 -->
+            <article class="course-card" data-category="pasteleria">
+                <div class="course-image">
+                    <img src="img/curso6.jpg" alt="Macarons franceses" />
+                    <span class="course-tag">Nuevo</span>
+                </div>
+                <div class="course-content">
+                    <h3>Tiramisu</h3>
+                    <p class="course-description">Domina la técnica perfecta para preparar estos delicados dulces franceses.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 8 Horas</span>
+                        <span><i class="fas fa-user-graduate"></i> Intermedio</span>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-price">$1,700 MXN</span>
+                        <button class="enroll-btn">Inscribirse</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Curso 6 -->
+            <article class="course-card" data-category="decoracion">
+                <div class="course-image">
+                    <img src="img/curso7.jpg" alt="Glaseado realista" />
+                </div>
+                <div class="course-content">
+                    <h3>Bizcochos y rellenos</h3>
+                    <p class="course-description">Técnicas avanzadas de glaseado para crear efectos hiperrealistas en tus pasteles.</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 7 Horas</span>
+                        <span><i class="fas fa-user-graduate"></i> Avanzado</span>
+                    </div>
+                    <div class="course-footer">
+                        <span class="course-price">$2,200 MXN</span>
+                        <button class="enroll-btn">Inscribirse</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <h2>¡Suscríbete a nuestro boletín!</h2>
+            <p>Recibe descuentos exclusivos y novedades sobre nuevos cursos.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Repostería Creativa</h3>
+                <p>Transformando pasiones en habilidades desde 2010.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> C. #8 col. cazones, Pooza Rica, ver</p>
+                <p><i class="fas fa-phone"></i> 782 144 6950</p>
+                
+            </div>
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Lunes: 2pm - 9pm</p>
+                <p>Martes a Domingo: 9am - 9pm</p>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hafos Cake. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
